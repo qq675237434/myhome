@@ -9,10 +9,13 @@ Ext.define('app.view.main.Main', {
     extend: 'Ext.container.Container',
     requires: [
         'app.view.main.MainController',
-        'app.view.main.MainModel'
-        ,'app.view.main.region.Top',
-        'app.view.main.region.Bottom'
+        'app.view.main.MainModel',
+        'app.ux.MyButton'
+        /*'app.view.main.region.Top',
+        'app.view.main.region.Bottom'*/
     ],
+    
+   /* uses: ['app.view.main.region.Top', 'app.view.main.region.Bottom'],*/
 
     xtype: 'app-main',
     
@@ -37,6 +40,11 @@ Ext.define('app.view.main.Main', {
         tbar: [{
             text: 'Button',
             handler: 'onClickButton'
+        }],
+        items:[{
+        
+        	xtype: 'myBtn' ,
+        	text: '自定义按钮'
         }]
     },{
         region: 'center',
@@ -48,8 +56,8 @@ Ext.define('app.view.main.Main', {
     }/*, {
     	region: 'north',
     	xtype: 'main-top'
-    }*//*, {
-    	region: 'south',
+    }, {
+    	region: 'south', // 把他放在最底下
     	xtype: 'main-bottom'
     }*/]
 });

@@ -8,29 +8,28 @@ Ext.define('app.view.main.MainModel', {
 
     data: {
         name: 'app',
-        
-        //系统信息
-        system:{
-        	name:'消费信托OM后台管理程序',
-        	iconUrl:'',
-        	version:'0.0.1'
+        // 系统信息
+        system: {
+            name: '工程项目合同及资金管理系统',
+            version: '5.2014.06.60',
+            iconUrl: ''
         },
-        //用户信息
+
+        // 用户单位信息和用户信息
         user: {
-        	company: '深圳中顺易金融服务有限公司',
-        	department: '分控部',
-        	name: '小易'
+            company: '武当太极公司',
+            department: '工程部',
+            name: '张三丰'
         },
-        
-        //服务信息
+
+        // 服务单位和服务人员信息
         service: {
-        	company: '深圳中顺易金融服务有限公司',
-        	name: '小易',
-        	phone: 'xxxxxxxxxxxxxx',
-        	qq: 'xxxxxxxxxxxxxxxxxxx',
-        	email: 'admin@admin.com',
-        	copyright: 'xxxxxx'
-        	
+            company: '无锡熙旺公司',
+            name: '蒋锋',
+            phonenumber: '1320528----',
+            qq: '78580822',
+            email: 'jfok1972@qq.com',
+            copyright: '熙旺公司'
         }
     }
 

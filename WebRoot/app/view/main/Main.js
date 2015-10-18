@@ -6,11 +6,12 @@
  * TODO - Replace this content of this view to suite the needs of your application.
  */
 Ext.define('app.view.main.Main', {
-    extend: 'Ext.container.Container',
+    extend: 'Ext.panel.Panel',
     requires: [
         'app.view.main.MainController',
         'app.view.main.MainModel',
-        'app.ux.MyButton'
+        'app.view.main.menu.MenuPanel',
+        'app.view.main.MainContent'
         /*'app.view.main.region.Top',
         'app.view.main.region.Bottom'*/
     ],
@@ -29,6 +30,9 @@ Ext.define('app.view.main.Main', {
     },
 
     items: [{
+    	region: 'west',
+    	xtype:'app-menu'
+    	/*
         xtype: 'panel',
         bind: {
             title: '{name}'
@@ -46,13 +50,10 @@ Ext.define('app.view.main.Main', {
         	xtype: 'myBtn' ,
         	text: '自定义按钮'
         }]
-    },{
+    */},{
         region: 'center',
-        xtype: 'tabpanel',
-        items:[{
-            title: 'Tab 1',
-            html: '<h2>Content appropriate for the current navigation.</h2>'
-        }]
+        xtype: 'mainContent'
+        
     }/*, {
     	region: 'north',
     	xtype: 'main-top'

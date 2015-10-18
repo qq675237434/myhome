@@ -5,14 +5,10 @@
  *
  * TODO - Replace this content of this view to suite the needs of your application.
  */
-Ext.define('app.view.main.MainController', {
+Ext.define('app.view.system.SystemController', {
     extend: 'Ext.app.ViewController',
 
-    requires: [
-        'Ext.window.MessageBox'
-    ],
-
-    alias: 'controller.main',
+    alias: 'controller.system',
 
     onClickButton: function () {
         Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
@@ -20,9 +16,7 @@ Ext.define('app.view.main.MainController', {
 
     onConfirm: function (choice) {
         if (choice === 'yes') {
-            //
-        	
-        	
+            //       	        	
         	var user = Ext.create('app.model.local.LocalUserModel',{
         		name:'小可爱',
         		age:11
@@ -32,13 +26,6 @@ Ext.define('app.view.main.MainController', {
             }); 
         	debugger ;
         	user.clearData();
-        	/*var oldModel = store.removeAll(true);
-        	
-        	var i = 0 ; 
-        	 store.each(function(rec){
-            	 store.removeAt(i);
-            	 i++;
-             });*/
         	store.add(user);
         	store.sync(); 
         	store.load();  
